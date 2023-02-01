@@ -17,6 +17,9 @@ class DevocaController {
 //        return "blog"
 //    }
 
+    @GetMapping("/")
+    fun showIndex() : String = "index"
+
     @GetMapping("/test")
     @ResponseBody
     fun getTest() : String = "TEST"
@@ -27,4 +30,5 @@ class DevocaController {
         model.addAttribute("message", "Hi.. it's just test api")
         return "welcome"
     }
+
 }
